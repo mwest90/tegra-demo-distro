@@ -248,3 +248,13 @@ PACKAGECONFIG:append:pn-qemu-system-native = " sdl"
 # track the version of this file when it was generated. This can safely be ignored if
 # this doesn't mean anything to you.
 CONF_VERSION = "2"
+
+INHERIT += "mender-full"
+MENDER_ARTIFACT_NAME = "test"
+INHERIT:append:tegra = " tegra-mender-setup"
+IMAGE_FSTYPES:tegra = "tegraflash mender dataimg"
+IMAGE_FSTYPES:pn-tegra-minimal-initramfs:tegra = "${INITRAMFS_FSTYPES}"
+IMAGE_FSTYPES:pn-tegra-initrd-flash-initramfs:tegra = "${TEGRA_INITRD_FLASH_INITRAMFS_FSTYPES}"
+MENDER_EFI_LOADER = ""
+MENDER_FEATURES_DISABLE:append = " mender-uboot"
+USE_REDUNDANT_FLASH_LAYOUT_DEFAULT = "1"

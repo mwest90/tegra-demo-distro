@@ -18,4 +18,6 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-tegra-support \
   ##OEROOT##/meta-demo-ci \
   ##OEROOT##/meta-tegrademo \
+  ##OEROOT##/meta-mender/meta-mender-core \
+  ##OEROOT##/meta-mender-community/meta-mender-tegra/meta-mender-tegra-jetpack5 \
   "
