@@ -12,3 +12,7 @@ REQUIRED_DISTRO_FEATURES = "x11 opengl virtualization"
 CORE_IMAGE_BASE_INSTALL += "packagegroup-demo-x11tests"
 CORE_IMAGE_BASE_INSTALL += "${@bb.utils.contains('DISTRO_FEATURES', 'vulkan', 'packagegroup-demo-vulkantests', '', d)}"
 CORE_IMAGE_BASE_INSTALL += "nvidia-docker cuda-libraries tegra-mmapi-tests vpi2-tests tensorrt-tests"
+
+IMAGE_INSTALL:append = " \
+    openssh-keys \
+        "
