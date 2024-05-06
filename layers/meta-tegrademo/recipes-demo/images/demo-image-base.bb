@@ -9,4 +9,5 @@ IMAGE_INSTALL:append = " \
     util-linux \
     tegra-redundant-boot \
     exfat-utils \
+    nano \
         "
